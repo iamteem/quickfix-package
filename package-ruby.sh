@@ -1,15 +1,23 @@
+#!/bin/bash
+
 rm -rf quickfix-ruby/lib
 rm -rf quickfix-ruby/ext/quickfix/*.h
 rm -rf quickfix-ruby/ext/quickfix/*.hpp
 rm -rf quickfix-ruby/ext/quickfix/*.cpp
 rm -rf quickfix-ruby/test
 rm -rf quickfix-ruby/spec
+rm -rf quickfix-ruby/*.gem
 
 mkdir -p quickfix-ruby/lib
 mkdir -p quickfix-ruby/ext/quickfix
 mkdir -p quickfix-ruby/ext/quickfix/double-conversion
 mkdir -p quickfix-ruby/test
 mkdir -p quickfix-ruby/spec
+
+rm -rf quickfix
+echo "Cloning repo..."
+git clone --depth 1 -b v1.15.1a https://github.com/iamteem/quickfix.git
+rm -rf quickfix/.git
 
 cp quickfix/LICENSE quickfix-ruby/
 

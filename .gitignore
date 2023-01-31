@@ -2,3 +2,5 @@
 *.gz
 *.zip
 /quickfix
+/quickfix-ruby/ext/quickfix/double-conversion
+/quickfix-ruby/spec
