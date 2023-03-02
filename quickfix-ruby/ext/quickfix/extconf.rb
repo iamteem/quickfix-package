@@ -1,7 +1,7 @@
 require 'mkmf'
 dir_config("quickfix", ["."], ".")
 CONFIG["CC"] = ENV['CXX']
-$CXXFLAGS += '-std=c++0x'
+$CXXFLAGS += " -std=c++0x"
 CONFIG["LIBS"] += ENV['LIBS'] if ENV['LIBS'] != nil
 
 if( ENV['CXX'] != nil )
